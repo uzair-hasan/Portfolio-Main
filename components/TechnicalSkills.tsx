@@ -1,56 +1,47 @@
-
 "use client";
-import React from "react";
 
-const TechnicalSkills = () => {
+import React from "react";
+import { motion } from "framer-motion";
+import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from "react-icons/fa";
+import { SiJavascript, SiNextdotjs, SiMongodb, SiExpress } from "react-icons/si";
+
 const skills = [
-  { name: "HTML", level: 85, color: "bg-[#6B21A8]" }, // Dark Purple
-  { name: "CSS", level: 80, color: "bg-[#CBACF9]" }, // Light Purple
-  { name: "JavaScript", level: 70, color: "bg-[#8b80c6]" }, // Soft Blue
-  { name: "React.js", level: 70, color: "bg-[#c59aec]" }, // Muted Blue-Grey
-  { name: "Next.js", level: 60, color: "bg-[#A78BFA]" }, // Medium Purple
-  { name: "MongoDB", level: 55, color: "bg-[#6366F1]" }, // Strong Blue
-  { name: "Express.js", level: 50, color: "bg-[#8a33ff]" }, // Dark Gray
-  { name: "Node.js", level: 50, color: "bg-[#4C1D95]" }, // Deep Dark Purple
+  { name: "HTML5", icon: <FaHtml5 className="text-orange-500 text-4xl" /> },
+  { name: "CSS3", icon: <FaCss3Alt className="text-blue-500 text-4xl" /> },
+  { name: "JavaScript", icon: <SiJavascript className="text-yellow-400 text-4xl" /> },
+  { name: "React.js", icon: <FaReact className="text-blue-400 text-4xl" /> },
+  { name: "Next.js", icon: <SiNextdotjs className="text-white text-4xl" /> },
+  { name: "Node.js", icon: <FaNodeJs className="text-green-500 text-4xl" /> },
+  { name: "Express.js", icon: <SiExpress className="text-gray-400 text-4xl" /> },
+  { name: "MongoDB", icon: <SiMongodb className="text-green-600 text-4xl" /> },
 ];
 
+const TechnicalSkills = () => {
+  return (
+    <div className="max-w-4xl mx-auto text-center py-10">
+      <h1 className="text-3xl md:text-5xl font-bold mb-12">
+        My Tech <span className="text-purple">Stack</span>
+      </h1>
 
-
-    return (
-        <>
-
-
-
-            <div className="rounded-lg bg-gradient-to-br shadow-lg w-full max-w-md mx-auto pb-10">
-                <h1 className=" heading mb-6">
-                    My Tech <span className="text-purple">Skills</span>
-                </h1>
-
-                {/* Grid Layout for Skills */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {skills.map((skill) => (
-                        <div key={skill.name} className="relative">
-                            <p className="text-sm font-medium text-white">{skill.name}</p>
-                            <div className="w-full h-3 bg-gray-300 rounded-md">
-                                <div
-                                    className={`${skill.color} h-3 rounded-md transition-all duration-500`}
-                                    style={{ width: `${skill.level}%` }}
-                                />
-                            </div>
-                            <p className="absolute right-0 top-0 text-sm text-purple">
-                                {skill.level}%
-                            </p>
-                        </div>
-                    ))}
-                </div>
-
-         
-            </div>
-
-
-
-        </>
-    )
-}
+      {/* Grid of skill cards */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {skills.map((skill, i) => (
+          <motion.div
+            key={skill.name}
+            whileHover={{ scale: 1.1, rotate: 3 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: i * 0.1, duration: 0.5 }}
+            className="p-6 bg-gradient-to-br from-purple-900/40 to-purple-700/20 rounded-xl shadow-lg border border-purple-500/30 flex flex-col items-center justify-center space-y-2 hover:shadow-purple-500/50"
+          >
+            {skill.icon}
+            <p className="text-white font-medium">{skill.name}</p>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default TechnicalSkills;

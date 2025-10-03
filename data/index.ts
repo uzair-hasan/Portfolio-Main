@@ -78,14 +78,14 @@ export const projects = [
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
     link: "https://full-stack-chat-app-eghm.onrender.com/login",
   },
-  // {
-  //   id: 2,
-  //   title: "A Multi Level Marketing Website",
-  //   des: "Developed the front-end using React.js,CSS and Bootstrap,ensuring a modern and responsive design.",
-  //   img: "/helping-hand.png",
-  //   iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-  //   link: "https://helpinghnd.co.in/",
-  // },
+  {
+    id: 2,
+    title: "A Multi Level Marketing Website",
+    des: "Developed the front-end using React.js,CSS and Bootstrap,ensuring a modern and responsive design.",
+    img: "/helping-hand.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    link: "https://helpinghnd.co.in/",
+  },
   {
     id: 3,
     title: "Frutiger Inida Website",
@@ -94,14 +94,14 @@ export const projects = [
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
     link: "https://frutigerindia.com/",
   },
-  // {
-  //   id: 4,
-  //   title: "KNK Signage Website",
-  //   des: "Crafted the KNK Signage website showcasing their vehicle signage expertise.",
-  //   img: "/knk.png",
-  //   iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-  //   link: "https://www.knksignage.com/",
-  // },
+  {
+    id: 4,
+    title: "KNK Signage Website",
+    des: "Crafted the KNK Signage website showcasing their vehicle signage expertise.",
+    img: "/knk.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    link: "https://www.knksignage.com/",
+  },
   {
     id: 5,
     title: "Azulman",
@@ -182,28 +182,28 @@ export const workExperience = [
   {
     id: 1,
     title: "Software Developer",
-    desc: "Oriens DevSecOps - Present",
+    desc: "Oriens DevSecOps || Nov-2043 - Sep-2025",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
     title: "Software Developer Trainee",
-    desc: "November-2023 to November-2024",
+    desc: "Nov-2023 to Oct-2024",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
     title: "Full Stack Developer",
-    desc: "October-2022 to October 2023",
+    desc: "APPZMINE TECH || Oct-2022 to Oct-2023",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
     title: "Web Developer Intern",
-    desc: "Jan-2022 to September-22",
+    desc: "APPZMINE TECH || Jan-2022 to Sep-22",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },

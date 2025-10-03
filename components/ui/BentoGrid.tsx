@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 
 // Also install this npm i --save-dev @types/react-lottie
 import Lottie from "react-lottie";
+import newImg from '../../public/b1.svg';
 
 import { cn } from "@/utils/cn";
 import { BackgroundGradientAnimation } from "./GradientBg";
@@ -97,6 +98,8 @@ export const BentoGridItem = ({
       {/* add img divs */}
 
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
+        {/* Left Section (Laptop Img) */}
+        
         <div className="w-full h-full absolute">
           {img && (
                         <img
@@ -172,6 +175,9 @@ export const BentoGridItem = ({
               </div>
             </div>
           )}
+
+
+          {/* COPY EMAIL ADDRESS */}
 
           {id === 6 && (
             <div className="mt-5 relative">
